@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import * as React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import { useGetQuestionsByCountQuery } from './services/quiz.js'
+import IntroPage from './pages/Intro.js';
+import QuizPage from './pages/Quiz/Quiz.js';
+import ResultsPage from './pages/Results/Results.js';
 
 function App() {
+  const questions = useGetQuestionsByCountQuery(10);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<IntroPage />} />
+        <Route path="quiz" element={<QuizPage questions={questions}/>} />
+        <Route path="results" element={<ResultsPage questions={questions} />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

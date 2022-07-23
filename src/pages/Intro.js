@@ -8,7 +8,7 @@ import {
 } from '../constants/static-text.js';
 
 const Intro = () => (
-  <>
+  <div className="intro page">
     <header>
       <h1>{INTRO_HEADLINE_TEXT}</h1>
     </header>
@@ -18,7 +18,7 @@ const Intro = () => (
       </div>
     ))}
     <Link to="/quiz">{INTRO_CTA_TEXT}</Link>
-  </>
+  </div>
 );
 
 export default Intro;

@@ -1,3 +1,3 @@
-- write tests
 - do some styling
 - error state handling
+- write instructions for setting up dev env

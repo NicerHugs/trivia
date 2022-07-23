@@ -1,0 +1,5 @@
+.results-list {
+  border: 1px solid;
+  max-height: 60vh;
+  overflow: scroll;
+}

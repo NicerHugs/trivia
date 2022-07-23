@@ -1,0 +1,28 @@
+.quiz-card {
+  border: 1px solid;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  justify-content: space-around;
+  margin: 0 auto;
+  max-height: calc(100vw - 40px);
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.quiz-card-ctas {
+  border: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.quiz-card-cta {
+  width: 40%;
+  height: 40px;
+}
+
+.quiz-card-cta.selected {
+  border: 4px solid;
+}

@@ -2,6 +2,7 @@ import React from 'react'
 import { useSelector, useDispatch } from 'react-redux';
 import { Navigate } from "react-router-dom";
 
+import './Results.css'
 import {
   RESULTS_HEADLINE_TEXT,
   RESULTS_CTA_TEXT,
@@ -27,15 +28,15 @@ const Results = ({questions}) => {
   const headerText = `${RESULTS_HEADLINE_TEXT} ${countOfCorrect}/10`;
 
   return (
-    <>
+    <div className="results page">
       <header>
         <h1>{headerText}</h1>
       </header>
-      <ul>
+      <ul className="results-list">
         {buildResultsList(results.value, questions.data.results)}
       </ul>
-      <button onClick={restart}>{RESULTS_CTA_TEXT}</button>
-    </>
+      <button className="page-cta" onClick={restart}>{RESULTS_CTA_TEXT}</button>
+    </div>
   )
 }
 

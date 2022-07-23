@@ -1,18 +1,29 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
 
+import './QuizCard.css';
 import { setUserResponse } from '../Results/resultsSlice.js'
+import {
+  CARD_CTA_TEXT_TRUE,
+  CARD_CTA_TEXT_FALSE
+} from '../../constants/static-text.js'
 
-const QuizCard = ({ index, question, incQuestion }) => {
+const QuizCard = ({ index, question, incQuestion, userResponse }) => {
   const dispatch = useDispatch();
   const setTrue = () => dispatch(setUserResponse({index, response: true}));
   const setFalse = () => dispatch(setUserResponse({index, response: false}));
 
   return (
-    <div>
+    <div className="quiz-card">
       <div dangerouslySetInnerHTML={{__html: question}}/>
-      <button onClick={setTrue}>True</button>
-      <button onClick={setFalse}>false</button>
+      <fieldset className="quiz-card-ctas">
+        <button className={`quiz-card-cta ${userResponse === true ? 'selected' : ''}`} onClick={setTrue}>
+          {CARD_CTA_TEXT_TRUE}
+        </button>
+        <button className={`quiz-card-cta ${userResponse === false ? 'selected' : ''}`} onClick={setFalse}>
+          {CARD_CTA_TEXT_FALSE}
+        </button>
+      </fieldset>
     </div>
   );
 }

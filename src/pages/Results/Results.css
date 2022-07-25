@@ -1,5 +1,23 @@
 .results-list {
+  list-style-type: none;
+  padding: 30px 20px 0;
   border: 1px solid;
   max-height: 60vh;
-  overflow: scroll;
+  overflow-y: scroll;
+  position: relative;
+}
+
+.results-list::after {
+  content: 'scroll to see more';
+  color: transparent;
+  display: block;
+  width: 100%;
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-left: -20px;
+  height: 50px;
+  padding: 0 20px;
+  background: linear-gradient(transparent 10%, white);
 }

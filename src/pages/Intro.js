@@ -17,7 +17,7 @@ const Intro = () => (
         {text}
       </div>
     ))}
-    <Link to="/quiz">{INTRO_CTA_TEXT}</Link>
+    <Link className="btn" to="/quiz">{INTRO_CTA_TEXT}</Link>
   </div>
 );
 

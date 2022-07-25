@@ -17,10 +17,10 @@ const QuizCard = ({ index, question, incQuestion, userResponse }) => {
     <div className="quiz-card">
       <div dangerouslySetInnerHTML={{__html: question}}/>
       <fieldset className="quiz-card-ctas">
-        <button className={`quiz-card-cta ${userResponse === true ? 'selected' : ''}`} onClick={setTrue}>
+        <button className={`btn quiz-card-cta ${userResponse === true ? 'selected' : ''}`} onClick={setTrue}>
           {CARD_CTA_TEXT_TRUE}
         </button>
-        <button className={`quiz-card-cta ${userResponse === false ? 'selected' : ''}`} onClick={setFalse}>
+        <button className={`btn quiz-card-cta ${userResponse === false ? 'selected' : ''}`} onClick={setFalse}>
           {CARD_CTA_TEXT_FALSE}
         </button>
       </fieldset>

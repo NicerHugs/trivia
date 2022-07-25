@@ -1,6 +1,24 @@
 .result-item {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-  padding-left: 1em;
-  text-indent: -1em;
+  margin-bottom: 1em;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 2em auto;
+}
+
+.result-item:last-of-type {
+  margin-bottom: -20px;
+}
+
+svg {
+  height: 1em;
+  width: 1em;
+  padding-right: .5em;
+}
+
+.result-item.correct svg path {
+  fill: #3b8a15;
+}
+
+.result-item.incorrect svg path {
+  fill: #f00;
 }

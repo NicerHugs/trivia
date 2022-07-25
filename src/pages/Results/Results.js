@@ -35,7 +35,7 @@ const Results = ({questions}) => {
       <ul className="results-list">
         {buildResultsList(results.value, questions.data.results)}
       </ul>
-      <button className="page-cta" onClick={restart}>{RESULTS_CTA_TEXT}</button>
+      <button className="btn" onClick={restart}>{RESULTS_CTA_TEXT}</button>
     </div>
   )
 }

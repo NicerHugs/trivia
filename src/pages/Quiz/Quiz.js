@@ -32,7 +32,7 @@ const Quiz = ({questions}) => {
       {data && (
         <>
           <QuizCard index={currentQuestionIndex} question={currentQuestion.question} userResponse={responses[currentQuestionIndex]}/>
-          <button className="page-cta" disabled={nextDisabled} onClick={handleClick}>{currentQuestionIndex < 9 ? "Next" : "Results"}</button>
+          <button className="btn" disabled={nextDisabled} onClick={handleClick}>{currentQuestionIndex < 9 ? "Next" : "Results"}</button>
         </>
       )}
     </div>

@@ -26,6 +26,18 @@ body {
   padding: 20px 0;
 }
 
-.page-cta {
+.btn {
+  align-items: center;
+  background: #efefef;
+  border: 1px solid;
+  color: black;
+  display: flex;
+  font-size: .8em;
   height: 40px;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.btn:disabled {
+  color: grey;
 }
